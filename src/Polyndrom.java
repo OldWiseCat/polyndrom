@@ -29,8 +29,9 @@ public class Polyndrom {
 
     public static void main (String[] args) {
         int max = 999;
-        while (!isPalindrome(max)) {
+        while (!isPalindrome(max) && max >= 100) {
             max--;
         }
+        //очко
     }
 }
