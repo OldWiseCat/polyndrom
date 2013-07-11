@@ -34,5 +34,6 @@ public class Polyndrom {
             max--;
         }
         //очко2
+        //jxrj3
     }
 }
