@@ -22,4 +22,15 @@ public class Polyndrom {
             }
         }
     }
+
+    public static boolean isPalindrome(int number) {
+        char[] strNumber = Integer.toString(number).toCharArray();
+
+        for (int i = 0, j = strNumber.length - 1; i < j; i++, j--)
+            if (strNumber[i] != strNumber[j])
+                return false;
+        return true;
+    }
+
+
 }
