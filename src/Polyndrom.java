@@ -7,20 +7,19 @@
  */
 
 public class Polyndrom {
-    public static boolean isPalindrome(int number) {
-        return true;
-    }
 
     private static void FindPal(Integer val,Object left,Object right)
     {
-        for(int i=val;i<999;i++)
+        for(int i=999;i>val;i--)
         {
-            for(int j=i; j<999;j++)
+            for(int j=i; j>val;j--)
             {
-                int x;
+                int x = 0;
                 x=i*j;
                 if(isPalindrome(x))
                 {
+                    //System.out.println(x);
+                    System.out.println("Left: " + i + " right " + j + " palindrome: " + x);
                     left=i;
                     right=j;
                 }
@@ -28,12 +27,25 @@ public class Polyndrom {
         }
     }
 
+    public static boolean isPalindrome(int number) {
+        char[] strNumber = Integer.toString(number).toCharArray();
+
+        for (int i = 0, j = strNumber.length - 1; i < j; i++, j--)
+            if (strNumber[i] != strNumber[j])
+                return false;
+        return true;
+    }
+
+
     public static void main (String[] args) {
         int max = 999;
-        while (!isPalindrome(max) && max >= 100) {
+        while (!isPalindrome(max*max) && max >= 100) {
             max--;
         }
-        //очко2
-        //jxrj3
+        System.out.println(max*max);
+        int left = max;
+        int right = max;
+        FindPal(max, left, right);
+        System.out.println("Left: " + left + " right " + right + " palindrome: " + left*right);
     }
 }
