@@ -5,6 +5,7 @@
  * Time: 21:18
  * To change this template use File | Settings | File Templates.
  */
+
 public class Polyndrom {
     private static void FindPal(Integer val,Object left,Object right)
     {
