@@ -13,9 +13,17 @@ public class Polyndrom {
     private static void FindPal(Integer val,Object left,Object right)
     {
         for(int i=val;i<999;i++)
-            for(int j=i,j<999;j++)
         {
-
+            for(int j=i; j<999;j++)
+            {
+                int x;
+                x=i*j;
+                if(isPalindrome(x))
+                {
+                    left=i;
+                    right=j;
+                }
+            }
         }
     }
 
